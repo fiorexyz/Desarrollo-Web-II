@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guías Desarrollo Web</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-pink-300 text-white py-6 shadow">
+    <div class="max-w-6xl mx-auto px-4">
+      <h1 class="text-3xl font-bold">Guías Desarrollo Web II</h1>
+      <p class="text-indigo-100 mt-2">Angie Fiorella Alberto Guzmán</p>
+      <p class="text-indigo-100 mt-2"> 20245297</p>
+    </div>
+  </header>
+
+  <!-- Contenido -->
+  <main class="max-w-6xl mx-auto px-4 py-10">
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+      <!-- Guía 1 -->
+      <details class="bg-white rounded-3xl shadow-lg border-l-8 border-pink-200 p-4 open:border-pink-500">
+        <summary class="cursor-pointer px-6 py-4 text-xl font-semibold"> Guía 1</summary>
+        <ul class="px-10 pb-4 space-y-2 text-indigo-700">
+          <li><a href="/Guia1_20245297/clipboard/index.html" class="text-black font-semibold hover:text-pink-600 transition">Clipboard</a></li>
+          <li><a href="/Guia1_20245297/galeria/galeria.html" class="text-black font-semibold hover:text-pink-600 transition">Galería</a></li>
+          <li><a href="/Guia1_20245297/login/login.html" class="text-black font-semibold hover:text-pink-600 transition">Login</a></li>
+          <li><a href="/Guia1_20245297/pricing-card/pricing.html" class="text-black font-semibold hover:text-pink-600 transition">Pricing</a></li>
+          <li><a href="/Guia1_20245297/producto/producto.html" class="text-black font-semibold hover:text-pink-600 transition">Producto</a></li>
+          <li><a href="/Guia1_20245297/EjercicioComplementario1/ejercicio_complementario1.html" class="text-black font-semibold hover:text-pink-600 transition">Ejercicio Complementario</a></li>
+        </ul>
+      </details>
+
+      <!-- Guía 2 -->
+      <details class="bg-white rounded-3xl shadow-lg border-l-8 border-pink-200 p-4 open:border-pink-500">
+        <summary class="cursor-pointer px-6 py-4 text-xl font-semibold">Guía 2</summary>
+      </details>
+
+      <!-- Guía 3 -->
+      <details class="bg-white rounded-3xl shadow-lg border-l-8 border-pink-200 p-4 open:border-pink-500">
+        <summary class="cursor-pointer px-6 py-4 text-xl font-semibold">Guía 3</summary>
+      </details>
+
+       <!-- Guía 4 -->
+      <details class="bg-white rounded-3xl shadow-lg border-l-8 border-pink-200 p-4 open:border-pink-500">
+        <summary class="cursor-pointer px-6 py-4 text-xl font-semibold">Guía 4</summary>
+      </details>
+
+       <!-- Guía 5 -->
+      <details class="bg-white rounded-3xl shadow-lg border-l-8 border-pink-200 p-4 open:border-pink-500">
+        <summary class="cursor-pointer px-6 py-4 text-xl font-semibold">Guía 5</summary>
+      </details>
+
+       <!-- Guía 6 -->
+      <details class="bg-white rounded-3xl shadow-lg border-l-8 border-pink-200 p-4 open:border-pink-500">
+        <summary class="cursor-pointer px-6 py-4 text-xl font-semibold">Guía 6</summary>
+      </details>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-pink-300 text-white text-center py-4 mt-auto">
+    <p>© 2026 - Desarrollo Web II</p>
+  </footer>
+
+  <script>
+    const allDetails = document.querySelectorAll("details");
+
+    allDetails.forEach((detail) => {
+        detail.addEventListener("toggle", () => {
+        if (detail.open) {
+            allDetails.forEach((otherDetail) => {
+            if (otherDetail !== detail) {
+                otherDetail.removeAttribute("open");
+            }
+            });
+        }
+        });
+    });
+ </script>
+
+</body>
+</html>
