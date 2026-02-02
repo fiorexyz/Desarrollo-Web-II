@@ -13,7 +13,7 @@ function App () {
   }
 
   const [data, setData] = useState(db)
-  const [cart, setCart] = useState(initialCart)
+  const [cart, setCart] = useState([initialCart])
 
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart))
@@ -33,12 +33,14 @@ function App () {
   }
 
   function calculateTotal(){
-    let total = cart.reduce(
-      (total, item) => total + item.price * item.quantity,
-      0
-    )
-    return total
-  }
+  return cart.reduce(
+    (total, item) =>
+      item?.price && item?.quantity
+        ? total + item.price * item.quantity
+        : total,
+    0
+  )
+}
 
   function increaseQuantity(id) {
     const updatedCart = cart.map(item =>
